@@ -222,22 +222,6 @@ build:
           kubeconfig: ${eks-cluster.kubeconfig}
           vpcId: ${eks-vpc.vpcId}
 
-use_cases:
-  - title: All architectures welcome
-    icon: nodes
-    icon_color: purple
-    description: "Choose from over 60 cloud providers, including public, private, and hybrid architectures."
-
-  - title: Modernize your approach
-    icon: download-from-cloud
-    icon_color: yellow
-    description: "Adopt serverless, containers, and managed services, and bring them closer to development."
-
-  - title: Adopt Kubernetes
-    icon: guage
-    icon_color: salmon
-    description: "Get up and running with clusters, supporting infrastructure, and application workloads."
-
 deploy:
   title: Get to production faster
   description: |
