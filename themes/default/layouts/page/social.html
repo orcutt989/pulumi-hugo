@@ -5,9 +5,9 @@
 {{ define "main" }}
     <section class="container mx-auto text-center my-16">
         {{ with .Params }}
-        <div class="flex flex-row flex-wrap">
+        <div class="flex flex-row flex-wrap w-full">
             {{ range .messages }}
-                <div class="basis-10 max-w-small border m-5 p-2">
+                <div style="flex-basis: 28%" class="border m-5 p-2">
                     <div>{{ .message }}</div>
                     <div>{{ .type }}</div>
                 </div>
