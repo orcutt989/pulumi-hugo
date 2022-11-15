@@ -1,0 +1,18 @@
+{{ define "hero" }}
+    {{ partial "hero.html" (dict "title" .Params.title "small_title" "true") }}
+{{ end }}
+
+{{ define "main" }}
+    <section class="container mx-auto text-center my-16">
+        {{ with .Params }}
+        <div class="flex flex-row flex-wrap">
+            {{ range .messages }}
+                <div class="basis-10 max-w-small border m-5 p-2">
+                    <div>{{ .message }}</div>
+                    <div>{{ .type }}</div>
+                </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+{{ end }}
