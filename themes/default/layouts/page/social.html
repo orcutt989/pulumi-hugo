@@ -3,13 +3,28 @@
 {{ end }}
 
 {{ define "main" }}
+    <section class="container mx-auto text-center my-16 w-1/3 text-2xl font-medium">
+        We are democratizing the cloud for every builder. 
+        Developers Love us for it. Don't believe us? 
+        Check out what our users have to say.
+    </section>
     <section class="container mx-auto text-center my-16">
         {{ with .Params }}
-        <div style="height: 60vh" class="flex flex-col flex-wrap w-full">
+        <div style="height: 75vh" class="flex flex-col flex-wrap w-full">
             {{ range .messages }}
-                <div class="w-4/12 border m-3 p-2">
-                    <div>{{ .message }}</div>
-                    <div>{{ .type }}</div>
+                <div class="w-4/12 border m-3 p-2 rounded shadow-md">
+                    <div class="flex flex-col">
+                        <div class="w-full flex-grow text-justify p-3">"{{ .message }}"</div>
+                        <div class="flex flex-row">
+                            <div class="p-3">
+                                @{{ .author }}
+                            </div>
+                            <div class="flex-grow"></div>
+                            <div class="p-3">
+                                <img class="w-6" src="/logos/tech/twitter.svg"></img>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             {{ end }}
         </div>
