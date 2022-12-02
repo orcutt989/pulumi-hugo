@@ -9,6 +9,6 @@
         <h3>Check out what our users have to say.</h3>
     </section>
     <section class="container mx-auto text-center my-16">
-        <pulumi-developer-quotes style="height: 100vh" class="flex flex-col flex-wrap max-w-full" quotes="{{ .Params.messages | jsonify }}"></pulumi-developer-quotes>
+        <pulumi-developer-quotes quotes="{{ .Params.messages | jsonify }}"></pulumi-developer-quotes>
     </section>
 {{ end }}
